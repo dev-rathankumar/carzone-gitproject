@@ -1,0 +1,146 @@
+.jnoty {
+    z-index: 9999;
+    font-size: 14px;
+    position: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.jnoty-info .jnoty-content .jnoty-header span{
+    color: #00B8D9 !important;
+}
+
+.jnoty-success .jnoty-content .jnoty-header span{
+    color: #36B37E !important;;
+}
+
+.jnoty-warning .jnoty-content .jnoty-header span{
+    color: #FFAB00 !important;;
+}
+
+.jnoty-danger .jnoty-content .jnoty-header span{
+    color: #FF5230 !important;;
+}
+
+.jnoty-icon {
+    margin-right: 5px;
+}
+
+.jnoty-content {
+    padding: 10px 20px;
+}
+
+.jnoty-message {
+    margin-left: 17px;
+    /* align the message to header*/
+    margin-top: 5px;
+}
+
+.jnoty.top-left {
+    left: 0px;
+    top: 0px;
+}
+
+.jnoty.top-right {
+    right: 0px;
+    top: 0px;
+}
+
+.jnoty.bottom-left {
+    left: 0px;
+    bottom: 0px;
+}
+
+.jnoty.bottom-right {
+    right: 0px;
+    bottom: 0px;
+}
+
+.jnoty.center {
+    top: 0px;
+    width: 50%;
+    left: 25%;
+}
+
+.jnoty.center .jnoty-container,
+.jnoty.center .jnoty-closer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jnoty-container {
+    background-color: #fff;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+    zoom: 1;
+    width: 350px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    display: none;
+    border: 1px solid #F4F5F7;
+    box-shadow: 0px 0px 9px 0px #D3D0D0;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+.jnoty-container .ui-state-highlight,
+.jnoty-container .ui-widget-content .ui-state-highlight,
+.jnoty-container .ui-widget-header .ui-state-highlight {
+    border: 1px solid #000;
+    background: #fff;
+    color: #555;
+}
+
+.jnoty-header {
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+}
+
+.jnoty-container .jnoty-close {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    z-index: 99;
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.jnoty-closer {
+    background-color: #fff;
+    opacity: 0.9;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(0.9*100));
+    zoom: 1;
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    display: none;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.jnoty-closer .ui-state-highlight,
+.jnoty-closer .ui-widget-content .ui-state-highlight,
+.jnoty-closer .ui-widget-header .ui-state-highlight {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+}
+
+
+/** Hide jGrowl when printing **/
+
+@media print {
+    .jnoty {
+        display: none;
+    }
+}

@@ -1,0 +1,68 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 28/03/2019 20:19
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("Flaticon.eot");
+  src: url("Flaticond41d.eot?#iefix") format("embedded-opentype"),
+       url("Flaticon.woff2") format("woff2"),
+       url("Flaticon.woff") format("woff"),
+       url("Flaticon.ttf") format("truetype"),
+       url("Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+    font-size: auto;
+    font-style: normal;
+    margin-left: 0;
+}
+
+.flaticon-way:before { content: "\f100"; }
+.flaticon-road:before { content: "\f101"; }
+.flaticon-manual-transmission:before { content: "\f102"; }
+.flaticon-calendar:before { content: "\f103"; }
+.flaticon-calendar-1:before { content: "\f104"; }
+.flaticon-fuel:before { content: "\f105"; }
+.flaticon-car:before { content: "\f106"; }
+.flaticon-car-1:before { content: "\f107"; }
+.flaticon-gear:before { content: "\f108"; }
+.flaticon-pin:before { content: "\f109"; }
+.flaticon-comment:before { content: "\f10a"; }
+.flaticon-blog:before { content: "\f10b"; }
+.flaticon-mail:before { content: "\f10c"; }
+.flaticon-mail-1:before { content: "\f10d"; }
+.flaticon-fax:before { content: "\f10e"; }
+.flaticon-shield:before { content: "\f10f"; }
+.flaticon-lock:before { content: "\f110"; }
+.flaticon-agreement:before { content: "\f111"; }
+.flaticon-deal:before { content: "\f112"; }
+.flaticon-money:before { content: "\f113"; }
+.flaticon-support:before { content: "\f114"; }
+.flaticon-support-1:before { content: "\f115"; }
+.flaticon-support-2:before { content: "\f116"; }
+.flaticon-phone:before { content: "\f117"; }
+.flaticon-earth:before { content: "\f118"; }
+.flaticon-user:before { content: "\f119"; }
+.flaticon-user-1:before { content: "\f11a"; }
+.flaticon-award:before { content: "\f11b"; }
+.flaticon-medal:before { content: "\f11c"; }
+.flaticon-cup:before { content: "\f11d"; }
+.flaticon-wheel:before { content: "\f11e"; }
+.flaticon-air-conditioner:before { content: "\f11f"; }
+.flaticon-speed:before { content: "\f120"; }
+.flaticon-car-2:before { content: "\f121"; }
+.flaticon-motor:before { content: "\f122"; }
+.flaticon-logout:before { content: "\f123"; }
