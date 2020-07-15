@@ -1,0 +1,314 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load humanize %}
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>{{single_car.car_title}}</h1>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">{{single_car.car_title}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Car details page start -->
+<div class="car-details-page content-area-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-xs-12">
+                <div class="car-details-section">
+                    <!-- Heading start -->
+                    <div class="heading-car clearfix">
+                        <div class="pull-left">
+                            <h3>{{single_car.car_title}}</h3>
+                            <h6>
+                                <i class="flaticon-pin"></i>{{single_car.state}}, {{single_car.city}}
+                            </h6>
+                        </div>
+                        <div class="pull-right">
+                            <h3><span>$ {{single_car.price | intcomma}}</span></h3>
+                        </div>
+                    </div>
+                    <div id="carDetailsSlider" class="carousel car-details-sliders slide mb-40">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item carousel-item" data-slide-number="0">
+                                <img src="{{single_car.car_photo.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% if single_car.car_photo_1 %}
+                            <div class="item carousel-item" data-slide-number="1">
+                                <img src="{{single_car.car_photo_1.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% endif %}
+                            {% if single_car.car_photo_2 %}
+                            <div class="item carousel-item" data-slide-number="2">
+                                <img src="{{single_car.car_photo_2.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% endif %}
+                            {% if single_car.car_photo_3 %}
+                            <div class="item carousel-item" data-slide-number="4">
+                                <img src="{{single_car.car_photo_3.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% endif %}
+                            {% if single_car.car_photo_4 %}
+                            <div class="item carousel-item" data-slide-number="5">
+                                <img src="{{single_car.car_photo_4.url}}" class="img-fluid" alt="slider-car">
+                            </div>
+                            {% endif %}
+                        </div>
+                        <!-- main slider carousel nav controls -->
+                        <div class="carousel-indicators-section clearfix">
+                            <ul class="carousel-indicators car-properties list-inline nav nav-justified">
+                                <li class="list-inline-item active">
+                                    <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#carDetailsSlider">
+                                        <img src="{{single_car.car_photo.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% if single_car.car_photo_1 %}
+                                <li class="list-inline-item">
+                                    <a id="carousel-selector-1" data-slide-to="1" data-target="#carDetailsSlider">
+                                        <img src="{{single_car.car_photo_1.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if single_car.car_photo_2 %}
+                                <li class="list-inline-item">
+                                    <a id="carousel-selector-2" data-slide-to="2" data-target="#carDetailsSlider">
+                                        <img src="{{single_car.car_photo_2.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if single_car.car_photo_3 %}
+                                <li class="list-inline-item">
+                                    <a id="carousel-selector-3" data-slide-to="3" data-target="#carDetailsSlider">
+                                        <img src="{{single_car.car_photo_3.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% if single_car.car_photo_4 %}
+                                <li class="list-inline-item">
+                                    <a id="carousel-selector-4" data-slide-to="4" data-target="#carDetailsSlider">
+                                        <img src="{{single_car.car_photo_4.url}}" class="img-fluid" alt="small-car">
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tabbing box start -->
+                    <div class="tabbing tabbing-box mb-40">
+                        <ul class="nav nav-tabs" id="carTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="false">Vehicle overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">Features</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="carTabContent">
+                            <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="one-tab">
+                                <div class="car-description mb-50">
+                                    <h3 class="heading-2">
+                                        Description
+                                    </h3>
+                                    <p>
+                                      {{single_car.description | safe }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
+                                <div class="features-info mb-50">
+                                    <h3 class="heading-2">Features</h3>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                            <ul>
+                                                <li>
+                                                    {{single_car.features}}
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="sidebar-right">
+                    <!-- Advanced search start -->
+                    <div class="widget advanced-search d-none-992">
+                        <button class="btn btn-outline-danger bomd btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Send message</button>
+
+
+                        <br>
+                        <h3 class="sidebar-title">Refine Your Search</h3>
+                        <ul>
+                            <li>
+                                <span>Color: </span>{{single_car.color}}
+                            </li>
+                            <li>
+                                <span>Model: </span>{{single_car.model}}
+                            </li>
+                            <li>
+                                <span>Year: </span>{{single_car.year}}
+                            </li>
+                            <li>
+                                <span>Condition: </span>{{single_car.condition}}
+                            </li>
+                            <li>
+                                <span>Body Style: </span>{{single_car.body_style}}
+                            </li>
+                            <li>
+                                <span>Engine: </span>{{single_car.engine}}
+                            </li>
+                            <li>
+                                <span>Transmission: </span>{{single_car.transmission}}
+                            </li>
+                            <li>
+                                <span>Interior: </span>{{single_car.interior}}
+                            </li>
+                            <li>
+                                <span>Miles: </span>{{single_car.miles | intcomma}} km
+                            </li>
+                            <li>
+                                <span>Doors: </span>{{single_car.doors}}
+                            </li>
+                            <li>
+                                <span>Passengers: </span>{{single_car.passengers}}
+                            </li>
+                            <li>
+                                <span>Vin No.: </span>{{single_car.vin_no}}
+                            </li>
+                            <li>
+                                <span>Milage: </span>{{single_car.milage}}
+                            </li>
+
+                            <li>
+                                <span>Fuel Type: </span>{{single_car.fuel_type}}
+                            </li>
+                            <li>
+                                <span>Owners: </span>{{single_car.no_of_owners}}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Inquiry Modal -->
+                    <div class="modal fade" id="inquiryModal" role="dialog">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="contact-dealer modal-header">
+                            <!-- <h5 class="modal-title" id="inquiryModalLabel">Contact Dealer</h5> -->
+                            <img src="img/logos/logo-black-white.png">
+                            <button type="button" class="close" data-dismiss="modal">
+                              <span>&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="#">
+                                <div class="form-group">
+                                  <label for="name" class="col-form-label">Hello, My Name is</label>
+                                  <div class="row">
+                                    <div class="col">
+                                      <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+                                    </div>
+                                  </div>
+                                </div>
+                                  <div class="form-group">
+                                      <select class="form-control" id="sel1">
+                                        <option>I'm interested in this</option>
+                                        <option>I'd like to know your best price for this</option>
+                                        <option>I'd like to test drive this</option>
+                                        <option>I'd like a history report for this</option>
+                                      </select>
+                                    </div>
+
+                                <div class="form-group">
+                                  <input type="text" name="zipcode" class="form-control" value="LAMBORGHINI HURACÁN." readonly>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="name" class="col-form-label">I live in</label>
+                                  <div class="row">
+                                    <div class="col">
+                                      <input type="text" name="city" class="form-control" placeholder="City" required>
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" name="state" class="form-control" placeholder="State" required>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col">
+                                        <label for="name" class="col-form-label">You can reach me by email at</label>
+                                      <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="phone" class="col-form-label">or by phone at</label>
+                                      <input type="text" name="phone" placeholder="Phone Number (optional)" class="form-control">
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="message" class="col-form-label">Add comments</label>
+                                  <textarea name="message" class="form-control" placeholder="Enter your message here (optional)"></textarea>
+                                </div>
+                                <hr>
+                                <input type="submit" value="Send" class="btn btn-block btn-danger">
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Question start -->
+                    <div class="widget question">
+                        <h5 class="sidebar-title">Get a Question?</h5>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="flaticon-pin"></i>20/F Green Road, Dhanmondi
+                            </li>
+                            <li>
+                                <i class="flaticon-mail"></i><a href="mailto:info@themevessel.com">info@themevessel.com</a>
+                            </li>
+                            <li>
+                                <i class="flaticon-phone"></i><a href="tel:+0477-85x6-552">+0477 85x6 552</a>
+                            </li>
+                        </ul>
+                        <div class="social-list clearfix">
+                            <ul>
+                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
+                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Properties details page end -->
+{% endblock %}
