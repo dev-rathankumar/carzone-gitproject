@@ -918,9 +918,7 @@ input[type=checkbox]:checked + label:before {
     width: 0;
 }
 
-.banner-bg {
-    background: url("../img/banner/banner-1.jpg");
-}
+
 
 .item-bg {
 
@@ -4658,7 +4656,7 @@ footer {
 
 /** Listings parallax start **/
 .listings-parallax {
-    
+
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
