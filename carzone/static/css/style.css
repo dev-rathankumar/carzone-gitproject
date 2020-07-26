@@ -923,7 +923,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .item-bg {
-    /*background: url("../img/banner-1.jpg");*/
+
     height: 100vh;
     /*animation: bgburnsEast 25s linear infinite alternate;
     -webkit-animation: bgburnsEast 25s linear infinite alternate;*/
@@ -4658,7 +4658,7 @@ footer {
 
 /** Listings parallax start **/
 .listings-parallax {
-    background: url(../img/listings-parallax.jpg);
+    
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -5504,7 +5504,7 @@ footer {
 }
 
 .contact-section .form-section {
-    max-width: 440px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 30px;
     background: #fff;

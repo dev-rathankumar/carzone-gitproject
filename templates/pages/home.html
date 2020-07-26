@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
 
-
+{% block title %} | Home {% endblock %}
 {% block content %}
 
 {% load humanize %}
 {% load static %}
 <!-- Banner start -->
+
 <div class="banner" id="banner">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner banner-slider-inner text-center">
             <div class="carousel-item banner-max-height active item-bg">
                 <img class="d-block w-100 h-100" src="{% static 'img/car-1.jpg' %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
+                
                     <h3>Wow Factor Standard</h3>
                     <h5>Allow us to guide you through the innovative stress<br>
                         free approach in finding your dream car.</h5>

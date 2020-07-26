@@ -5504,7 +5504,7 @@ footer {
 }
 
 .contact-section .form-section {
-    max-width: 440px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 30px;
     background: #fff;
@@ -9169,7 +9169,7 @@ table {
         line-height: normal;
         margin-bottom: 15px;
     }
-    
+
     .alert {
         text-transform: uppercase;
         font-size: 12px;
@@ -9758,16 +9758,10 @@ input, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
     line-height: 49px;
     color: #f0151f;
 }
+a.nav-link.active{
+  color: #f0151f !important;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.tabbing-box .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  color: #fff !important;
+}
