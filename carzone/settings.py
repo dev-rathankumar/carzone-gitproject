@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'carzone_db',
 #         'USER': 'postgres',
-#         'PASSWORD': 'qWerty@123',
+#         'PASSWORD': '######',
 #         'HOST': 'localhost',
 #     }
 # }
@@ -162,8 +162,8 @@ SITE_ID = 1
 # Email sending
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'rathan.kumar049@gmail.com'
-EMAIL_HOST_PASSWORD = 'qWerty@124'
+EMAIL_HOST_USER = '########'
+EMAIL_HOST_PASSWORD = '#######'
 EMAIL_USE_TLS = True
 
 
